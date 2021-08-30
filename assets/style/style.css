@@ -1,0 +1,184 @@
+@import url('https://fonts.googleapis.com/css2?family=Big+Shoulders+Display:wght@700&family=Lexend+Deca&display=swap');
+
+:root{
+    --brightOrange: hsl(31, 77%, 52%);
+    --darkCyan: hsl(184, 100%, 22%);
+    --veryDarkCyan: hsl(179, 100%, 13%);
+    --transparentWhite: hsla(0, 0%, 100%, 0.75); /* (paragraphs) */
+    --veryLightGray: hsl(0, 0%, 95%); /* (background, headings, buttons) */
+}
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    overflow-x: hidden;
+    min-height: 100vh;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+nav div#cards{
+    display: flex;
+}
+
+nav div#cards div.card{
+    width: 300px;
+    padding: 40px;
+}
+
+nav div#cards div.card.first{
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+
+nav div#cards div.card.last{
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+}
+
+nav div#cards div.card#sedans{
+    background-color: var(--brightOrange);
+}
+
+nav div#cards div.card#suvs{
+    background-color: var(--darkCyan);
+}
+
+nav div#cards div.card#luxury{
+    background-color: var(--veryDarkCyan);
+}
+
+nav div#cards div.card p.title{
+    margin: 30px 0;
+    color: var(--veryLightGray);
+    font-family: 'Big Shoulders Display';
+    font-size: 40px;
+    text-transform: uppercase;
+}
+
+nav div#cards div.card p.info{
+    color: var(--transparentWhite);
+    font-family: 'Lexend Deca';
+    font-size: 15px;
+}
+
+nav div#cards div.card button{
+    border-radius: 20px;
+    border: none;
+    font-family: 'Lexend Deca';
+    padding: 10px 20px;
+    margin-top: 100px;
+    border: 2px solid var(--transparentWhite);
+    cursor: pointer;
+    font-size: 16px;
+    transition: .5s background-color;
+}
+
+nav div#cards div.card#sedans button{
+    color: var(--brightOrange);
+}
+
+nav div#cards div.card#suvs button{
+    color: var(--darkCyan);
+}
+
+nav div#cards div.card#luxury button{
+    color: var(--veryDarkCyan);
+}
+
+nav div#cards div.card button:hover{
+    background-color: transparent;
+}
+
+nav div#cards div.card#sedans button:hover,
+nav div#cards div.card#suvs button:hover,
+nav div#cards div.card#luxury button:hover{
+    color: var(--transparentWhite);
+}
+
+footer{
+    font-size: 11px; text-align: center;
+    color: hsl(228, 45%, 44%);
+    margin-top: 20px;
+    font-family: 'Lexend Deca';
+}
+
+
+@media screen and (max-width: 950px){
+    nav div#cards div.card{
+        width: 250px;
+        padding: 30px 20px;
+    }
+}
+
+@media screen and (max-width: 800px){
+    body{
+        justify-content: flex-start;
+        padding: 50px 0;
+    }
+
+    nav div#cards{
+        flex-direction: column;
+    }
+
+    nav div#cards div.card{
+        width: 300px;
+    }
+
+    nav div#cards div.card.first{
+        border-radius: 0;
+        border-top-left-radius: 10px;
+        border-top-right-radius: 10px;
+    }
+    
+    nav div#cards div.card.last{
+        border-radius: 0;
+        border-bottom-left-radius: 10px;
+        border-bottom-right-radius: 10px;
+    }
+
+    nav div#cards div.card button{
+        margin-top: 50px;
+    }
+}
+
+@media screen and (max-width: 350px) {
+    nav div#cards{
+        width: 90%;
+        margin-left: 5%;
+    }
+
+    nav div#cards div.card{
+        width: 100%;
+    }
+
+    nav div#cards div.card p.title{
+        margin: 20px 0;
+    }
+
+    nav div#cards div.card button{
+        margin-top: 2s0px;
+    }
+}
+
+@media screen and (max-width: 250px){
+    nav div#cards{
+        width: 100%;
+        margin: 0;
+    }
+}
+
+
+
+@media screen and (max-height: 550px){
+    body{
+        justify-content: flex-start;
+        padding: 50px 0;
+    }
+}
